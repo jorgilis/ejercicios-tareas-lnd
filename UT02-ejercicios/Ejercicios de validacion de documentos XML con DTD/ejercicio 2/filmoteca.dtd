@@ -1,0 +1,10 @@
+<!ELEMENT filmoteca (pelicula+)>
+<!ELEMENT pelicula (titulo, director, ano, duracion, genero, calificacion)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT director (#PCDATA)>
+<!ELEMENT ano (#PCDATA)>
+<!ELEMENT duracion (#PCDATA)>
+<!ATTLIST duracion
+unidad CDATA #REQUIRED>
+<!ELEMENT genero (#PCDATA)>
+<!ELEMENT calificacion (#PCDATA)>

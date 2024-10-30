@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="estudiantes">
+<xs:complexType>
+<xs:sequence maxOccurs="10" minOccurs="0">
+<xs:element name="estudiante">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="nombre" type="nombreType"/>
+<xs:element name="apellidos" type="apellidosType"/>
+<xs:element name="matricula" type="matriculaType"/>
+<xs:element name="fechaInscripcion" type="fechaInscripcionType"/>
+<xs:element name="correo" type="correoType"/>
+<xs:element name="telefono1" type="telefonoType" minOccurs="1" maxOccurs="1"/>
+<xs:element name="telefono2" type="telefonoType" minOccurs="0" maxOccurs="1"/>
+<xs:element name="telefono3" type="telefonoType" minOccurs="0" maxOccurs="1"/>
+<xs:element name="direccion">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="via" type="viaType"/>
+<xs:element name="nombreVia" type="nombreViaType"/>
+<xs:element name="codigoPostal" type="codigoPostalType"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:simpleType name="nombreType">
+<xs:restriction base="xs:string">
+<xs:maxLength value="30"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="apellidosType">
+<xs:restriction base="xs:string">
+<xs:maxLength value="50"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="matriculaType">
+<xs:restriction base="xs:string">
+<xs:length value="7"/>
+<xs:pattern value="\d{7}"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="fechaInscripcionType">
+<xs:restriction base="xs:date">
+<xs:minInclusive value="2000-01-01"/>
+<xs:maxInclusive value="2023-12-31"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="correoType">
+<xs:restriction base="xs:string">
+<xs:pattern value=".+@.+\..+"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="telefonoType">
+<xs:restriction base="xs:string">
+<xs:length value="9"/>
+<xs:pattern value="\d{9}"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="viaType">
+<xs:restriction base="xs:string">
+<xs:enumeration value="calle"/>
+<xs:enumeration value="avenida"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="nombreViaType">
+<xs:restriction base="xs:string">
+<xs:maxLength value="100"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="codigoPostalType">
+<xs:restriction base="xs:string">
+<xs:length value="5"/>
+<xs:pattern value="\d{5}"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:schema>

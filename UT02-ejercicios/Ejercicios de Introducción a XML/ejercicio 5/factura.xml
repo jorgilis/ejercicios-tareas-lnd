@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Factura>
+    <Emisor>
+        <Nombre>Orlando Juan Lobán</Nombre>
+        <NIF>39000001A</NIF>
+        <Domicilio>
+            <Calle>Avenida Rosario 2, 1 A</Calle>
+            <CodigoPostal>08001</CodigoPostal>
+            <Ciudad>Barcelona</Ciudad>
+        </Domicilio>
+        <Email>info@orlandojuan.es</Email>
+    </Emisor>
+    <Receptor>
+        <Nombre>Empresa de logística, S. L.</Nombre>
+        <CIF>B12345678</CIF>
+        <Domicilio>
+            <Calle>Calle San Juan de la Luz, s/n</Calle>
+            <CodigoPostal>28001</CodigoPostal>
+            <Ciudad>Madrid</Ciudad>
+        </Domicilio>
+        <Email>info@empresalogisitasl.com</Email>
+    </Receptor>
+    <Detalles>
+        <Producto>
+            <Descripcion>Producto 1</Descripcion>
+            <Unidades>2</Unidades>
+            <PrecioUnitario>100.00</PrecioUnitario>
+            <PrecioTotal>200.00</PrecioTotal>
+        </Producto>
+        <Producto>
+            <Descripcion>Producto 2</Descripcion>
+            <Unidades>4</Unidades>
+            <PrecioUnitario>150.00</PrecioUnitario>
+            <PrecioTotal>600.00</PrecioTotal>
+        </Producto>
+        <Producto>
+            <Descripcion>Producto 3</Descripcion>
+            <Unidades>7</Unidades>
+            <PrecioUnitario>93.00</PrecioUnitario>
+            <PrecioTotal>651.00</PrecioTotal>
+        </Producto>
+    </Detalles>
+    <Totales>
+        <LLE>1451.00</LLE>
+        <IVA>304.71</IVA>
+        <Descuento>-217.65</Descuento>
+        <Total>1538.06</Total>
+    </Totales>
+    <Comentarios>
+        <MetodoPago>Pago por transferencia: ESXXXXXXXXXXXXXXXX9</MetodoPago>
+    </Comentarios>
+    <InformacionFactura>
+        <FechaFactura>17/04/2024</FechaFactura>
+        <NumeroFactura>2024-0001</NumeroFactura>
+        <FechaVencimiento>17/05/2024</FechaVencimiento>
+    </InformacionFactura>
+</Factura>

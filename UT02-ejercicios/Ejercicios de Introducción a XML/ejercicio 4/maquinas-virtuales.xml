@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<maquinas_virtuales>
+    <maquina id="1">
+        <nombre>Ubuntu_Server</nombre>
+        <cpu>4</cpu>
+        <ram unidad="MB">4096</ram>
+        <disco tipo="vdi" tamano="50" unidad="GB">/path/to/ubuntu_server.vdi</disco>
+        <adaptador_red>NAT</adaptador_red>
+        <reglas_reenvio>
+            <regla>
+                <puerto_host>8080</puerto_host>
+                <puerto_guest>80</puerto_guest>
+            </regla>
+            <regla>
+                <puerto_host>443</puerto_host>
+                <puerto_guest>443</puerto_guest>
+            </regla>
+        </reglas_reenvio>
+    </maquina>
+    <maquina id="2">
+        <nombre>WINDOWS 7</nombre>
+        <cpu>2</cpu>
+        <ram unidad="MB">8192</ram>
+        <disco tipo="vmdk" tamano="100" unidad="GB">/path/to/WINDOWS 7.vmdk</disco>
+        <adaptador_red>Adaptador Puente</adaptador_red>
+    </maquina>
+    <maquina id="3">
+        <nombre>CentOS_7</nombre>
+        <cpu>2</cpu>
+        <ram unidad="MB">2048</ram>
+        <disco tipo="vdi" tamano="20" unidad="GB">/path/to/centos_7.vdi</disco>
+        <adaptador_red>NAT</adaptador_red>
+        <reglas_reenvio>
+            <regla>
+                <puerto_host>2222</puerto_host>
+                <puerto_guest>22</puerto_guest>
+            </regla>
+        </reglas_reenvio>
+    </maquina>
+</maquinas_virtuales>

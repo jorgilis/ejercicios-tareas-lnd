@@ -1,0 +1,19 @@
+<!ELEMENT maquinas_virtuales (maquina+)>
+<!ELEMENT maquina (nombre, cpu, ram, disco, adaptador_red, reglas_reenvio?)>
+<!ATTLIST maquina
+id ID #REQUIRED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT cpu (#PCDATA)>
+<!ELEMENT ram (#PCDATA)>
+<!ATTLIST ram
+unidad CDATA #REQUIRED>
+<!ELEMENT disco (#PCDATA)>
+<!ATTLIST disco
+tipo CDATA #REQUIRED
+tamano CDATA #REQUIRED
+unidad CDATA #REQUIRED>
+<!ELEMENT adaptador_red (#PCDATA)>
+<!ELEMENT reglas_reenvio (regla*)>
+<!ELEMENT regla (puerto_host, puerto_guest)>
+<!ELEMENT puerto_host (#PCDATA)>
+<!ELEMENT puerto_guest (#PCDATA)>

@@ -1,0 +1,28 @@
+<!ELEMENT Factura (Emisor, Receptor, Detalles, Totales, Comentarios?, InformacionFactura)>
+<!ELEMENT Emisor (Nombre, NIF, Domicilio, Email)>
+<!ELEMENT Receptor (Nombre, CIF, Domicilio, Email)>
+<!ELEMENT Domicilio (Calle, CodigoPostal, Ciudad)>
+<!ELEMENT Detalles (Producto+)>
+<!ELEMENT Producto (Descripcion, Unidades, PrecioUnitario, PrecioTotal)>
+<!ELEMENT Totales (LLE, IVA, Descuento?, Total)>
+<!ELEMENT Comentarios (MetodoPago)>
+<!ELEMENT InformacionFactura (FechaFactura, NumeroFactura, FechaVencimiento)>
+<!ELEMENT Nombre (#PCDATA)>
+<!ELEMENT NIF (#PCDATA)>
+<!ELEMENT CIF (#PCDATA)>
+<!ELEMENT Email (#PCDATA)>
+<!ELEMENT Calle (#PCDATA)>
+<!ELEMENT CodigoPostal (#PCDATA)>
+<!ELEMENT Ciudad (#PCDATA)>
+<!ELEMENT Descripcion (#PCDATA)>
+<!ELEMENT Unidades (#PCDATA)>
+<!ELEMENT PrecioUnitario (#PCDATA)>
+<!ELEMENT PrecioTotal (#PCDATA)>
+<!ELEMENT LLE (#PCDATA)>
+<!ELEMENT IVA (#PCDATA)>
+<!ELEMENT Descuento (#PCDATA)>
+<!ELEMENT Total (#PCDATA)>
+<!ELEMENT MetodoPago (#PCDATA)>
+<!ELEMENT FechaFactura (#PCDATA)>
+<!ELEMENT NumeroFactura (#PCDATA)>
+<!ELEMENT FechaVencimiento (#PCDATA)>
