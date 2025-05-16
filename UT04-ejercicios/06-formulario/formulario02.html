@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario 02</title>
+    <style>
+        fieldset {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        legend {
+            font-weight: bold;
+            padding: 0 10px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: inline-block;
+            width: 200px;
+            vertical-align: top;
+        }
+        textarea {
+            width: 400px;
+            height: 120px;
+        }
+        .radio-group, .checkbox-group {
+            display: inline-block;
+        }
+        .radio-group label, .checkbox-group label {
+            width: auto;
+            margin-right: 15px;
+        }
+        .file-input-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+        .file-input-wrapper input[type="file"] {
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 80px;
+            height: 100%;
+        }
+        .file-input-button {
+            display: inline-block;
+            padding: 5px 10px;
+            background: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="post" enctype="multipart/form-data">
+        <!-- Primer bloque: Preferencias y fecha -->
+        <fieldset>
+            <legend>Indique sus preferencias por favor</legend>
+            
+            <div class="form-group">
+                <label>Elija una fecha:</label>
+                <input type="date" name="fecha1" placeholder="dd / mm / aaaa">
+            </div>
+            
+            <div class="form-group">
+                <label>Elija un fichero:</label>
+                <div class="file-input-wrapper">
+                    <span class="file-input-button">Examinar...</span>
+                    <input type="file" name="fichero1">
+                </div>
+                <span>No se ha seleccionado ningún fichero</span>
+            </div>
+            
+            <div class="form-group">
+                <label>Opciones:</label>
+                <div class="radio-group">
+                    <input type="radio" name="procesador" value="procesadoramd" id="amd">
+                    <label for="amd">AMD</label>
+                    
+                    <input type="radio" name="procesador" value="procesadorintel_i5" id="i5">
+                    <label for="i5">Intel i5</label>
+                    
+                    <input type="radio" name="procesador" value="procesadorintel_i7" id="i7">
+                    <label for="i7">Intel i7</label>
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- Segundo bloque: Asignaturas y datos personales -->
+        <fieldset>
+            <legend>Indique sus preferencias por favor</legend>
+            
+            <div class="form-group">
+                <div class="radio-group">
+                    <input type="radio" name="asignatura" value="asignaturamatematicas" id="matematicas">
+                    <label for="matematicas">Matemáticas</label>
+                    
+                    <input type="radio" name="asignatura" value="asignaturahistoria" id="historia">
+                    <label for="historia">Historia</label>
+                    
+                    <input type="radio" name="asignatura" value="asignaturageografia" id="geografia">
+                    <label for="geografia">Geografía</label>
+                    
+                    <input type="radio" name="asignatura" value="asignaturalengua" id="lengua">
+                    <label for="lengua">Lengua</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre">
+            </div>
+            
+            <div class="form-group">
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" name="apellidos" id="apellidos">
+            </div>
+            
+            <div class="form-group">
+                <label for="direccion">Dirección:</label>
+                <input type="text" name="direccion" id="direccion">
+            </div>
+
+            <div class="form-group">
+                <label>Elija un color:</label>
+                <input type="color" name="color">
+            </div>
+            
+            <div class="form-group">
+                <textarea name="comentarios" id="comentarios" rows="6" cols="59" placeholder="Utilice este cuadro para escribir"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Elija una fecha:</label>
+                <input type="date" name="fecha2" placeholder="dd / mm / aaaa">
+            </div>
+            
+            <div class="form-group">
+                <select name="idioma" id="idioma">
+                    <option value="ingles">Inglés</option>
+                    <option value="aleman">Alemán</option>
+                    <option value="frances">Francés</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>Elija una hora:</label>
+                <input type="time" name="hora">
+            </div>
+            
+            <div class="form-group">
+                <label>Elija un fichero:</label>
+                <div class="file-input-wrapper">
+                    <span class="file-input-button">Examinar...</span>
+                    <input type="file" name="fichero2">
+                </div>
+                <span>No se ha seleccionado ningún fichero</span>
+            </div>
+            
+            <div class="form-group">
+                <div class="checkbox-group">
+                    <input type="checkbox" name="sexo" value="sexomujer" id="mujer">
+                    <label for="mujer">Mujer</label>
+                    
+                    <input type="checkbox" name="sexo" value="sexohombre" id="hombre">
+                    <label for="hombre">Hombre</label>
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- Tercer bloque: Color, texto y más -->
+        <fieldset>
+
+        </fieldset>
+
+        <!-- Botón de enviar -->
+        <div class="form-group">
+            <input type="submit" value="Enviar">
+        </div>
+    </form>
+</body>
+</html>

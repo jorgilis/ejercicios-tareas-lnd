@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeo con preload metadata</title>
+</head>
+<body>
+    <h1>Vídeo con preload</h1>
+    
+    <video controls preload="metadata" width="600">
+        <source src="../ejercicio02/ejercicio02-video1.mp4" type="video/mp4">
+        Tu navegador no soporta el elemento de vídeo.
+    </video>
+
+    <h2>Comportamiento de preload="metadata"</h2>
+    <p>Con este valor, el navegador solo carga los metadatos del vídeo (duración, dimensiones, pista de audio) al cargar la página, pero no descarga el contenido del vídeo hasta que el usuario lo solicita.</p>
+    
+    <h2>Otros valores posibles para el atributo preload</h2>
+    <ul>
+        <li>
+            <strong>preload="auto"</strong>: El navegador puede decidir cargar el vídeo completo anticipadamente si considera que será útil (depende de la conexión del usuario).
+        </li>
+        <li>
+            <strong>preload="none"</strong>: El navegador no carga ningún dato del vídeo hasta que el usuario lo inicia. Ahorra ancho de banda pero puede causar retrasos al reproducir.
+        </li>
+    </ul>
+</body>
+</html>

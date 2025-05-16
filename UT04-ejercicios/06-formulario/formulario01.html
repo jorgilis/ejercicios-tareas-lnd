@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario 01</title>
+    <style>
+        fieldset {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        legend {
+            font-weight: bold;
+            padding: 0 10px;
+        }
+        div {
+            margin-bottom: 10px;
+        }
+        label {
+            display: inline-block;
+            width: 120px;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="post">
+        <!-- Primer recuadro: Idiomas, conector, nombre y apellidos -->
+        <fieldset>
+            <legend>Rellenar</legend>
+            
+            <!-- Radio buttons para idiomas -->
+            <div>
+                <span>Idiomas:</span><br>
+                <input type="radio" name="idioma" value="idiomaingles" id="ingles">
+                <label for="ingles" style="width: auto;">Inglés</label><br>
+                
+                <input type="radio" name="idioma" value="idiomaaleman" id="aleman">
+                <label for="aleman" style="width: auto;">Alemán</label><br>
+                
+                <input type="radio" name="idioma" value="idiomafrances" id="frances">
+                <label for="frances" style="width: auto;">Francés</label>
+            </div>
+
+            <!-- Lista desplegable para conector -->
+            <div>
+                <select name="conector" id="conector">
+                    <option value="usb">USB</option>
+                    <option value="paralelo">Paralelo</option>
+                    <option value="ps2">PS2</option>
+                </select>
+            </div>
+
+            <!-- Campos de texto -->
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre">
+            </div>
+
+            <div>
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" name="apellidos" id="apellidos">
+            </div>
+        </fieldset>
+
+        <!-- Segundo recuadro: Sexo y fecha -->
+        <fieldset>
+            <legend>Indique sus preferencias por favor</legend>
+            
+            <!-- Lista desplegable múltiple para sexo -->
+            <div>
+                <select name="sexo" id="sexo" multiple>
+                    <option value="hombre">Hombre</option>
+                    <option value="mujer">Mujer</option>
+                </select>
+            </div>
+
+            <!-- Checkboxes para sexo -->
+            <div>
+                <span>Seleccione:</span><br>
+                <input type="checkbox" name="sexo" value="sexomujer" id="mujer">
+                <label for="mujer" style="width: auto;">Mujer</label><br>
+                
+                <input type="checkbox" name="sexo" value="sexohombre" id="hombre">
+                <label for="hombre" style="width: auto;">Hombre</label>
+            </div>
+
+            <!-- Control de fecha -->
+            <div>
+                <label for="fecha">Elija una fecha:</label>
+                <input type="date" name="fecha" id="fecha" placeholder="dd/mm/aaaa">
+            </div>
+        </fieldset>
+
+        <!-- Botón de enviar -->
+        <div>
+            <input type="submit" value="Enviar">
+        </div>
+    </form>
+</body>
+</html>
